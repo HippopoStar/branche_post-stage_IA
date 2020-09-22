@@ -19,8 +19,12 @@ class	Puzzle
 
 	Piece	**puzzle_board;
 	int	is_puzzle;
+	size_t	puzzle_size;
 
 	int	parse_file(const char *filename);
+	int	parse_puzzle_size(const std::string &line);
+	int	parse_puzzle_line(const std::string &line, size_t *parsed_lines);
+	int	parse_word(const std::string &word, size_t parsed_lines, size_t *parsed_words);
 };
 
 #endif
